@@ -4,9 +4,9 @@ $font-url: 'https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..80
 
 @font-face {
     font-family: 'Morganite-Bold';
-    src: url('../fonts/Morganite-ExtraBold.woff2') format('woff2'),
-    url('../fonts/Morganite-ExtraBold.woff') format('woff'),
-    url('../fonts/Morganite-ExtraBold.ttf') format('truetype');
+    src: url('/assets/fonts/Morganite-ExtraBold.woff2') format('woff2'),
+    url('/assets/fonts/Morganite-ExtraBold.woff') format('woff'),
+    url('/assets/fonts/Morganite-ExtraBold.ttf') format('truetype');
     font-weight: 800;
     font-display: swap;
     font-style: normal;
@@ -14,9 +14,9 @@ $font-url: 'https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..80
 
 @font-face {
     font-family: 'Morganite-SemiBold';
-    src: url('../fonts/Morganite-SemiBold.woff2') format('woff2'),
-    url('../fonts/Morganite-SemiBold.woff') format('woff'),
-    url('../fonts/Morganite-SemiBold.ttf') format('truetype');
+    src: url('/assets/fonts/Morganite-SemiBold.woff2') format('woff2'),
+    url('/assets/fonts/Morganite-SemiBold.woff') format('woff'),
+    url('/assets/fonts/Morganite-SemiBold.ttf') format('truetype');
     font-weight: 600;
     font-display: swap;
     font-style: normal;
