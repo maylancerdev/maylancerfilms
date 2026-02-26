@@ -15,19 +15,16 @@
             </div>
             <div class="col-lg-8">
                 <div class="tp-blog-vp-item-wrap ml-30">
-                    @php
-                        $blogFallbackImages = ['blog/vp/thumb.jpg', 'blog/vp/thumb-2.jpg', 'blog/vp/thumb-3.jpg'];
-                    @endphp
                     @foreach($latestPosts ?? [] as $post)
                     <div class="tp-blog-vp-item tp--hover-item">
                         <div class="row align-items-center">
+                            @if($post->cover_image)
                             <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-6">
                                 <a href="{{ route('blog.show', $post->slug) }}" class="tp-blog-vp-thumb d-block mb-30 p-relative fix d-inline-block mr-30 tp-round-20">
-                                    <div class="tp--hover-img" data-displacement="{{ Vite::image('imghover/stripe-mul.png') }}" data-intensity="0.2" data-speedin="1" data-speedout="1">
-                                        <img class="w-100" src="{{ $post->cover_image ? '/storage/'.$post->cover_image : Vite::image($blogFallbackImages[$loop->index % count($blogFallbackImages)]) }}" alt="{{ $post->title }}" loading="lazy">
-                                    </div>
+                                    <img class="w-100" src="/storage/{{ $post->cover_image }}" alt="{{ $post->cover_image_alt ?: $post->title }}" loading="lazy">
                                 </a>
                             </div>
+                            @endif
                             <div class="col-xxl-6 col-xl-7 col-lg-7 col-md-6">
                                 <div class="tp-blog-vp-content mb-30">
                                     <div class="tp-blog-vp-dates mb-10">

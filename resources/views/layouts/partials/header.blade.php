@@ -10,7 +10,7 @@
                             @if(!empty($settings['logo']))
                                 <img data-width="150" src="/storage/{{ $settings['logo'] }}" alt="{{ $settings['site_name'] ?? config('app.name') }}">
                             @else
-                                <img data-width="150" src="{{ Vite::image('logo/logo-white-2.png') }}" alt="{{ $settings['site_name'] ?? config('app.name') }}">
+                                <span class="tp-ff-inter fw-600 fs-24 tp-text-common-white">{{ $settings['site_name'] ?? config('app.name') }}</span>
                             @endif
                         </a>
                     </div>

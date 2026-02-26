@@ -31,8 +31,9 @@
     {{-- RSS autodiscovery --}}
     <link rel="alternate" type="application/rss+xml" title="{{ $settings['site_name'] ?? config('app.name') }} — Blog" href="{{ route('blog.feed') }}">
 
-    @php $faviconPath = ($settings['favicon'] ?? '') ?: ''; @endphp
-    <link rel="shortcut icon" type="image/x-icon" href="{{ $faviconPath ? '/storage/'.$faviconPath : Vite::image('logo/favicon.png') }}">
+    @if(!empty($settings['favicon']))
+    <link rel="shortcut icon" type="image/x-icon" href="/storage/{{ $settings['favicon'] }}">
+    @endif
     {{-- Analytics --}}
     @if(!empty($settings['analytics_code']))
     {!! $settings['analytics_code'] !!}

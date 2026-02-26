@@ -12,9 +12,6 @@
     <div class="container-fluid container-1524">
         <div class="tp-service-vp-wrap">
             <div class="row row-cols-1">
-                @php
-                    $serviceFallbackImages = ['thumb.jpg', 'thumb-2.jpg', 'thumb-3.jpg', 'thumb-4.jpg', 'thumb-5.jpg'];
-                @endphp
                 @foreach($sections['services']['items'] ?? [] as $item)
                 <div class="col">
                     <div class="tp-service-vp-item tp-reveal-item active p-relative">
@@ -29,10 +26,9 @@
                                     </span>
                             </a>
                         </div>
-                        @php
-                            $fallbackImage = $serviceFallbackImages[$loop->index % count($serviceFallbackImages)];
-                        @endphp
-                        <div class="tp-reveal-bg" data-background="{{ !empty($item['image']) ? '/storage/'.$item['image'] : Vite::image('service/vp/'.$fallbackImage) }}"></div>
+                        @if(!empty($item['image']))
+                        <div class="tp-reveal-bg" data-background="/storage/{{ $item['image'] }}"></div>
+                        @endif
                     </div>
                 </div>
                 @endforeach

@@ -1,18 +1,14 @@
 <div class="tp-hero-area p-relative fix pre-header">
-    @php
-        $heroImages = $sections['hero']['images'] ?? [];
-        $heroFallbacks = ['hero/vp/1.png','hero/vp/2.png','hero/vp/3.png','hero/vp/4.png','hero/vp/5.png','hero/vp/6.png','hero/vp/7.png','hero/vp/8.png','hero/vp/9.png','hero/vp/10.png','hero/vp/11.png','hero/vp/12.png','hero/vp/13.png','hero/vp/14.png','hero/vp/15.png','hero/vp/16.png','hero/vp/17.png'];
-        $heroSources = !empty($heroImages)
-            ? collect($heroImages)->map(fn($img) => '/storage/'.$img)->all()
-            : collect($heroFallbacks)->map(fn($f) => Vite::image($f))->all();
-    @endphp
+    @php $heroImages = $sections['hero']['images'] ?? []; @endphp
+    @if(!empty($heroImages))
     <div class="content z-index-2 d-none d-md-block">
-        @foreach($heroSources as $src)
+        @foreach($heroImages as $img)
         <div class="content__img">
-            <div class="content__img-inner" style="background-image:url({{ $src }})"></div>
+            <div class="content__img-inner" style="background-image:url(/storage/{{ $img }})"></div>
         </div>
         @endforeach
     </div>
+    @endif
     <div class="tp-hero-vp-spacing">
         <div class="container-fluid container-1824 containers">
             <div class="row">

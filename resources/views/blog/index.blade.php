@@ -74,7 +74,9 @@
             <div class="col-lg-4 col-md-6 mb-40">
                 <div class="tp-blog-vp-item tp--hover-item">
                     <a href="{{ route('blog.show', $post->slug) }}" class="tp-blog-vp-thumb d-block mb-20 p-relative fix tp-round-20">
-                        <img class="w-100" src="{{ $post->cover_image ? '/storage/'.$post->cover_image : Vite::image('blog/vp/thumb.jpg') }}" alt="{{ $post->title }}" loading="lazy">
+                        @if($post->cover_image)
+                        <img class="w-100" src="/storage/{{ $post->cover_image }}" alt="{{ $post->cover_image_alt ?: $post->title }}" loading="lazy">
+                        @endif
                     </a>
                     <div class="tp-blog-vp-content">
                         <div class="tp-blog-vp-dates mb-10 d-flex align-items-center gap-2">

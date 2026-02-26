@@ -57,7 +57,7 @@
                     @elseif(!empty($settings['logo']))
                         <img data-width="150" src="/storage/{{ $settings['logo'] }}" alt="{{ $settings['site_name'] ?? config('app.name') }}">
                     @else
-                        <img data-width="150" src="{{ Vite::image('logo/logo-white-2.png') }}" alt="{{ $settings['site_name'] ?? config('app.name') }}">
+                        <span class="tp-ff-inter fw-600 fs-24 tp-text-common-white">{{ $settings['site_name'] ?? config('app.name') }}</span>
                     @endif
                 </a>
             </div>
@@ -87,30 +87,20 @@
                 </ul>
             </nav>
         </div>
+        @php $offcanvasGallery = $settings['offcanvas_gallery'] ?? []; @endphp
+        @if(!empty($offcanvasGallery))
         <div class="tp-offcanvas-gallery d-none d-xl-block">
             <div class="row gx-2">
+                @foreach($offcanvasGallery as $galleryImg)
                 <div class="col-md-3 col-3">
                     <div class="tp-offcanvas-gallery-img fix">
-                        <a class="popup-image" href="{{ Vite::image('offcanvas/offcanvas-1.jpg') }}"><img src="{{ Vite::image('offcanvas/offcanvas-1.jpg') }}" alt=""></a>
+                        <a class="popup-image" href="/storage/{{ $galleryImg }}"><img src="/storage/{{ $galleryImg }}" alt=""></a>
                     </div>
                 </div>
-                <div class="col-md-3 col-3">
-                    <div class="tp-offcanvas-gallery-img fix">
-                        <a class="popup-image" href="{{ Vite::image('offcanvas/offcanvas-2.jpg') }}"><img src="{{ Vite::image('offcanvas/offcanvas-2.jpg') }}" alt=""></a>
-                    </div>
-                </div>
-                <div class="col-md-3 col-3">
-                    <div class="tp-offcanvas-gallery-img fix">
-                        <a class="popup-image" href="{{ Vite::image('offcanvas/offcanvas-3.jpg') }}"><img src="{{ Vite::image('offcanvas/offcanvas-3.jpg') }}" alt=""></a>
-                    </div>
-                </div>
-                <div class="col-md-3 col-3">
-                    <div class="tp-offcanvas-gallery-img fix">
-                        <a class="popup-image" href="{{ Vite::image('offcanvas/offcanvas-4.jpg') }}"><img src="{{ Vite::image('offcanvas/offcanvas-4.jpg') }}" alt=""></a>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
+        @endif
         <div class="tp-offcanvas-contact">
             <h3 class="tp-offcanvas-title sm">{{ __('front.offcanvas.information') }}</h3>
             <ul>

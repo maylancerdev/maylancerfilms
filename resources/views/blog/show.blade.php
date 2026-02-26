@@ -154,7 +154,9 @@ $articleJsonLd = json_encode([
             <div class="col-lg-4 col-md-6 mb-40">
                 <div class="tp-blog-vp-item tp--hover-item">
                     <a href="{{ route('blog.show', $related->slug) }}" class="tp-blog-vp-thumb d-block mb-20 p-relative fix tp-round-20">
-                        <img class="w-100" src="{{ $related->cover_image ? '/storage/'.$related->cover_image : Vite::image('blog/vp/thumb.jpg') }}" alt="{{ $related->title }}" loading="lazy">
+                        @if($related->cover_image)
+                        <img class="w-100" src="/storage/{{ $related->cover_image }}" alt="{{ $related->cover_image_alt ?: $related->title }}" loading="lazy">
+                        @endif
                     </a>
                     <div class="tp-blog-vp-content">
                         <div class="tp-blog-vp-dates mb-10">

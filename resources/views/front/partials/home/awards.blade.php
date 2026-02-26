@@ -1,10 +1,7 @@
 @if(!isset($sections['awards']) || ($sections['awards']['is_active'] ?? true))
 @php
     $awardsImages = $sections['awards']['images'] ?? [];
-    $awardsFallbacks = ['awards/vp/aw01-black.jpg','awards/vp/aw02-black.jpg','awards/vp/aw03-black.jpg','awards/vp/aw04-black.jpg','awards/vp/aw05-black.jpg','awards/vp/aw06-black.jpg'];
-    $awardsSources = !empty($awardsImages)
-        ? collect($awardsImages)->map(fn($img) => '/storage/'.$img)->all()
-        : collect($awardsFallbacks)->map(fn($f) => Vite::image($f))->all();
+    $awardsSources = collect($awardsImages)->map(fn($img) => '/storage/'.$img)->all();
     $awardsParallax = [
         ['start' => 'top 120%', 'stop' => '600%'],
         ['start' => 'top 90%', 'stop' => '1100%'],
