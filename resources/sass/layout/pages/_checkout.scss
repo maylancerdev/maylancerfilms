@@ -188,7 +188,7 @@
             }
             &::before{
                 position: absolute;
-                content: url('../img/login/check.svg');
+                content: url('/assets/img/login/check.svg');
                 top: 4px;
                 left: 0;
                 width: 18px;
@@ -450,7 +450,7 @@
             }
             &::before{
                 position: absolute;
-                content: url('../img/login/check.svg');
+                content: url('/assets/img/login/check.svg');
                 top: 4px;
                 left: 0;
                 width: 18px;
@@ -485,7 +485,7 @@
             font-family: var(--tp-ff-dm);
             &::after{
                 position: absolute;
-                content: url('../img/login/check.svg');
+                content: url('/assets/img/login/check.svg');
                 left: auto;
                 right: 0;
                 bottom: 4px;

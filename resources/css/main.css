@@ -5058,7 +5058,7 @@ body.loaded {
     visibility: visible;
 }
 .body-overlay:hover {
-    cursor: url(../img/cross-icon/cross-out.png), pointer;
+    cursor: url(/assets/img/cross-icon/cross-out.png), pointer;
 }
 
 .tp-offcanvas {
@@ -11003,7 +11003,7 @@ body.tp-magic-cursor #magic-cursor {
     height: 100vh;
     background-repeat: repeat;
     background-position: top left;
-    background-image: url(../img/body/noise.png);
+    background-image: url(/assets/img/body/noise.png);
 }
 .tp-hero-md-spacing {
     padding-top: 220px;
@@ -22855,7 +22855,7 @@ body.tp-magic-cursor #magic-cursor {
 }
 .tp-login-remeber label::before {
     position: absolute;
-    content: url("../img/login/check.svg");
+    content: url("/assets/img/login/check.svg");
     top: 4px;
     left: 0;
     width: 18px;
@@ -24321,7 +24321,7 @@ body.tp-magic-cursor #magic-cursor {
 }
 .tp-product-details-msg ul li::after {
     position: absolute;
-    content: url("../img/product/icon/product-icon.svg");
+    content: url("/assets/img/product/icon/product-icon.svg");
     top: 4px;
     left: 0;
     width: 18px;
@@ -24797,7 +24797,7 @@ body.tp-magic-cursor #magic-cursor {
 }
 .tp-product-details-review-remeber label::before {
     position: absolute;
-    content: url("../img/product/icon/check.svg");
+    content: url("/assets/img/product/icon/check.svg");
     top: 4px;
     left: 0;
     width: 18px;
@@ -25164,7 +25164,7 @@ body.tp-magic-cursor #magic-cursor {
 }
 .tp-checkout-option label::before {
     position: absolute;
-    content: url("../img/login/check.svg");
+    content: url("/assets/img/login/check.svg");
     top: 4px;
     left: 0;
     width: 18px;
@@ -25418,7 +25418,7 @@ body.tp-magic-cursor #magic-cursor {
 }
 .tp-return-customer-remeber label::before {
     position: absolute;
-    content: url("../img/login/check.svg");
+    content: url("/assets/img/login/check.svg");
     top: 4px;
     left: 0;
     width: 18px;
@@ -25449,7 +25449,7 @@ body.tp-magic-cursor #magic-cursor {
 }
 .tp-return-customer-forgot a::after {
     position: absolute;
-    content: url("../img/login/check.svg");
+    content: url("/assets/img/login/check.svg");
     left: auto;
     right: 0;
     bottom: 4px;

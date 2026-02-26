@@ -654,7 +654,7 @@
           font-family: var(--tp-ff-dm);
           &::after{
             position: absolute;
-            content: url("../img/product/icon/product-icon.svg");
+            content: url("/assets/img/product/icon/product-icon.svg");
             top: 4px;
             left: 0;
             width: 18px;
@@ -1124,7 +1124,7 @@
           }
           &::before{
             position: absolute;
-            content: url('../img/product/icon/check.svg');
+            content: url('/assets/img/product/icon/check.svg');
             top: 4px;
             left: 0;
             width: 18px;
