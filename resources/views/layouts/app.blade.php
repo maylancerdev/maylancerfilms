@@ -91,26 +91,26 @@
 
 
 <!-- JS here -->
-<script src="{{ Vite::js('vendor/jquery.js') }}"></script>
-<script src="{{ Vite::js('bootstrap-bundle.js') }}"></script>
-<script src="{{ Vite::js('plugin.js') }}"></script>
-<script src="{{ Vite::js('three.js') }}"></script>
-<script src="{{ Vite::js('hover-effect.umd.js') }}"></script>
-<script src="{{ Vite::js('split-type.js') }}"></script>
-<script src="{{ Vite::js('swiper-gl.js') }}"></script>
-<script src="{{ Vite::js('effect-slicer.js') }}"></script>
-<script src="{{ Vite::js('swiper-bundle.js') }}"></script>
-<script src="{{ Vite::js('magnific-popup.js') }}"></script>
-<script src="{{ Vite::js('nice-select.js') }}"></script>
-<script src="{{ Vite::js('purecounter.js') }}"></script>
-<script src="{{ Vite::js('isotope-pkgd.js') }}"></script>
-<script src="{{ Vite::js('imagesloaded-pkgd.js') }}"></script>
-<script src="{{ Vite::js('backtop.js') }}"></script>
-<script src="{{ Vite::js('ajax-form.js') }}"></script>
-<script src="{{ Vite::js('slider-init.js') }}"></script>
-<script src="{{ Vite::js('main.js') }}"></script>
-<script src="{{ Vite::js('tp-cursor.js') }}"></script>
-<script type="module" src="{{ Vite::js('img-revel/index.js') }}"></script>
+<script src="{{ asset('assets/js/vendor/jquery.js') }}"></script>
+<script src="{{ asset('assets/js/bootstrap-bundle.js') }}"></script>
+<script src="{{ asset('assets/js/plugin.js') }}"></script>
+<script src="{{ asset('assets/js/three.js') }}"></script>
+<script src="{{ asset('assets/js/hover-effect.umd.js') }}"></script>
+<script src="{{ asset('assets/js/split-type.js') }}"></script>
+<script src="{{ asset('assets/js/swiper-gl.js') }}"></script>
+<script src="{{ asset('assets/js/effect-slicer.js') }}"></script>
+<script src="{{ asset('assets/js/swiper-bundle.js') }}"></script>
+<script src="{{ asset('assets/js/magnific-popup.js') }}"></script>
+<script src="{{ asset('assets/js/nice-select.js') }}"></script>
+<script src="{{ asset('assets/js/purecounter.js') }}"></script>
+<script src="{{ asset('assets/js/isotope-pkgd.js') }}"></script>
+<script src="{{ asset('assets/js/imagesloaded-pkgd.js') }}"></script>
+<script src="{{ asset('assets/js/backtop.js') }}"></script>
+<script src="{{ asset('assets/js/ajax-form.js') }}"></script>
+<script src="{{ asset('assets/js/slider-init.js') }}"></script>
+<script src="{{ asset('assets/js/main.js') }}"></script>
+<script src="{{ asset('assets/js/tp-cursor.js') }}"></script>
+<script type="module" src="{{ asset('assets/js/img-revel/index.js') }}"></script>
 @include('layouts.partials.cookie-consent')
 </body>
 </html>
