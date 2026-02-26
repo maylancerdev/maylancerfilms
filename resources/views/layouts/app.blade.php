@@ -28,6 +28,16 @@
     {{-- Canonical URL --}}
     <link rel="canonical" href="@yield('canonical', url()->current())">
 
+    {{-- Preload critical fonts --}}
+    <link rel="preload" href="/assets/fonts/Morganite-ExtraBold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/fonts/Morganite-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+
+    {{-- DNS prefetch for external resources --}}
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="dns-prefetch" href="https://player.vimeo.com">
+
     {{-- RSS autodiscovery --}}
     <link rel="alternate" type="application/rss+xml" title="{{ $settings['site_name'] ?? config('app.name') }} — Blog" href="{{ route('blog.feed') }}">
 
@@ -92,24 +102,24 @@
 
 <!-- JS here -->
 <script src="{{ asset('assets/js/vendor/jquery.js') }}"></script>
-<script src="{{ asset('assets/js/bootstrap-bundle.js') }}"></script>
-<script src="{{ asset('assets/js/plugin.js') }}"></script>
-<script src="{{ asset('assets/js/three.js') }}"></script>
-<script src="{{ asset('assets/js/hover-effect.umd.js') }}"></script>
-<script src="{{ asset('assets/js/split-type.js') }}"></script>
-<script src="{{ asset('assets/js/swiper-gl.js') }}"></script>
-<script src="{{ asset('assets/js/effect-slicer.js') }}"></script>
-<script src="{{ asset('assets/js/swiper-bundle.js') }}"></script>
-<script src="{{ asset('assets/js/magnific-popup.js') }}"></script>
-<script src="{{ asset('assets/js/nice-select.js') }}"></script>
-<script src="{{ asset('assets/js/purecounter.js') }}"></script>
-<script src="{{ asset('assets/js/isotope-pkgd.js') }}"></script>
-<script src="{{ asset('assets/js/imagesloaded-pkgd.js') }}"></script>
-<script src="{{ asset('assets/js/backtop.js') }}"></script>
-<script src="{{ asset('assets/js/ajax-form.js') }}"></script>
-<script src="{{ asset('assets/js/slider-init.js') }}"></script>
-<script src="{{ asset('assets/js/main.js') }}"></script>
-<script src="{{ asset('assets/js/tp-cursor.js') }}"></script>
+<script defer src="{{ asset('assets/js/bootstrap-bundle.js') }}"></script>
+<script defer src="{{ asset('assets/js/plugin.js') }}"></script>
+<script defer src="{{ asset('assets/js/three.js') }}"></script>
+<script defer src="{{ asset('assets/js/hover-effect.umd.js') }}"></script>
+<script defer src="{{ asset('assets/js/split-type.js') }}"></script>
+<script defer src="{{ asset('assets/js/swiper-gl.js') }}"></script>
+<script defer src="{{ asset('assets/js/effect-slicer.js') }}"></script>
+<script defer src="{{ asset('assets/js/swiper-bundle.js') }}"></script>
+<script defer src="{{ asset('assets/js/magnific-popup.js') }}"></script>
+<script defer src="{{ asset('assets/js/nice-select.js') }}"></script>
+<script defer src="{{ asset('assets/js/purecounter.js') }}"></script>
+<script defer src="{{ asset('assets/js/isotope-pkgd.js') }}"></script>
+<script defer src="{{ asset('assets/js/imagesloaded-pkgd.js') }}"></script>
+<script defer src="{{ asset('assets/js/backtop.js') }}"></script>
+<script defer src="{{ asset('assets/js/ajax-form.js') }}"></script>
+<script defer src="{{ asset('assets/js/slider-init.js') }}"></script>
+<script defer src="{{ asset('assets/js/main.js') }}"></script>
+<script defer src="{{ asset('assets/js/tp-cursor.js') }}"></script>
 <script type="module" src="{{ asset('assets/js/img-revel/index.js') }}"></script>
 @include('layouts.partials.cookie-consent')
 </body>
