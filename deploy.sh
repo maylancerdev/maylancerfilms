@@ -34,7 +34,15 @@ echo ""
 # ── Pre-flight checks ──
 command -v php >/dev/null 2>&1    || fail "PHP is not installed"
 command -v composer >/dev/null 2>&1 || fail "Composer is not installed"
+command -v node >/dev/null 2>&1   || fail "Node.js is not installed"
 command -v npm >/dev/null 2>&1    || fail "NPM is not installed"
+
+# ── Check Node.js version (Vite 7 requires Node 20.19+ or 22.12+) ──
+NODE_MAJOR=$(node -v | cut -d. -f1 | tr -d 'v')
+if [ "$NODE_MAJOR" -lt 20 ]; then
+    fail "Node.js v$(node -v) detected. Vite requires Node.js 20.19+ or 22.12+. Please upgrade."
+fi
+log "Node.js $(node -v) OK"
 
 # ── Check .env exists ──
 if [ ! -f .env ]; then
