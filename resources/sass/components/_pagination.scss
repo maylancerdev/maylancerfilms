@@ -1,0 +1,37 @@
+// Dark theme pagination
+.tp-pagination {
+    .tp-pagination-item {
+        .tp-pagination-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 44px;
+            height: 44px;
+            padding: 0 12px;
+            border-radius: 8px;
+            color: #999;
+            background: #111112;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            text-decoration: none;
+            transition: all 0.25s ease;
+        }
+
+        a.tp-pagination-link:hover {
+            color: #fff;
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(255, 255, 255, 0.15);
+        }
+
+        &.active .tp-pagination-link {
+            color: #fff;
+            background: #E86531;
+            border-color: #E86531;
+        }
+
+        &.disabled .tp-pagination-link {
+            color: #444;
+            cursor: default;
+            opacity: 0.5;
+        }
+    }
+}
