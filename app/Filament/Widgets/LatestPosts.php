@@ -31,7 +31,7 @@ class LatestPosts extends BaseWidget
                 TextColumn::make('status')
                     ->label(__('blog.admin.status'))
                     ->badge()
-                    ->color(fn (string $state): string => match ($state) {
+                    ->color(fn ($state): string => match ($state?->value ?? $state) {
                         'published' => 'success',
                         'draft' => 'warning',
                         'scheduled' => 'info',
